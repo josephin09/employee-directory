@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Employee Directory</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+   
+    <header>
+      <h1>Employee Directory</h1>
+
+      <div class="actions">
+        <div class="actions-center">
+          <input type="text" id="searchInput" placeholder="Search by name or email" />
+          <button onclick="toggleFilterSidebar()">Filter</button>
+        </div>
+
+        <div class="actions-right">
+          <button class="add-btn" onclick="location.href='form.html'">Add Employee</button>
+        </div>
+      </div>
+    </header>
+
+   
+    <div class="sort-show-bar">
+      <label>Sort:
+        <select id="sortSelect">
+          <option value="">--Select--</option>
+          <option value="firstName">First Name</option>
+          <option value="department">Department</option>
+        </select>
+      </label>
+      <label>Show:
+        <select id="pageSize">
+          <option value="10">10</option>
+          <option value="25">25</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select>
+      </label>
+    </div>
+
+   
+    <aside id="filterSidebar">
+      <h3>Filter Employees</h3>
+      <input type="text" id="filterName" placeholder="First Name" />
+      <input type="text" id="filterDept" placeholder="Department" />
+      <input type="text" id="filterRole" placeholder="Role" />
+      <button onclick="applyFilter()">Apply</button>
+      <button onclick="resetFilter()">Reset</button>
+    </aside>
+
+   
+    <main id="employeeList"></main>
+
+   
+    <div id="paginationControls">
+      <button onclick="prevPage()">Previous</button>
+      <span id="pageInfo"></span>
+      <button onclick="nextPage()">Next</button>
+    </div>
+
+   
+    <footer>
+      <p>&copy; 2025 Employee Directory App. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,204 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f0f0f0;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+header {
+  background: #222;
+  color: #fff;
+  padding: 1rem;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header .actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.actions-left,
+.actions-center,
+.actions-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header select,
+header input,
+header button {
+  padding: 5px;
+}
+
+.actions-center input {
+  padding: 5px 10px;
+}
+
+.actions-center button {
+  padding: 5px 10px;
+}
+
+.actions-right .add-btn {
+  background: #28a745;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.actions-right .add-btn:hover {
+  background: #218838;
+}
+
+.sort-show-bar {
+  background: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+aside {
+  display: none;
+  background: #eee;
+  padding: 1rem;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+aside.open {
+  display: block;
+}
+
+main {
+  background: #fff;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 250px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card p {
+  margin: 0.5rem 0;
+}
+
+.card button {
+  margin: 5px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background: #ddd;
+}
+
+#paginationControls {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+.form-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.form-container form label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.form-container input,
+.form-container select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.btn-cancel {
+  background-color: #dc3545; /* Bootstrap red */
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-submit {
+  background-color: #007bff; /* Bootstrap blue */
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-cancel:hover {
+  background-color: #c82333;
+}
+
+.btn-submit:hover {
+  background-color: #0069d9;
+}
+
+@media screen and (max-width: 768px) {
+  header .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .sort-show-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+
